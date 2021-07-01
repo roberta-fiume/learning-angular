@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
+  // inputs: ['ninja'],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
@@ -12,14 +13,26 @@ export class HomeComponent implements OnInit {
 
   alertMe(val: any) {
     alert(val);
-  }
+  };
 
-  ninja = {
-    name: "Yoshi",
-    belt: "Black"
-  }
+  // ninja = {
+  //   name: "Yoshi",
+  //   belt: "Black"
+  // };
 
   constructor() { }
+
+  @Input() ninja: any;
+
+  @Input() firstName = '';
+  @Input() lastName: any;
+  @Input() siblings: any;
+
+  @Output() onYell = new EventEmitter();
+
+  fireYellEvent(e: any) {
+    this.onYell.emit(e);
+  }
 
   ngOnInit(): void {
   }

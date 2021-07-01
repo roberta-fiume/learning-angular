@@ -10,7 +10,13 @@
 </header>
 
 <section>
-  <app-home>Hello There!</app-home>
+  <app-home 
+    [ninja]="ninja"
+    [firstName]="robertaProp"
+    [lastName]="lastName"
+    [siblings]="siblings"
+    (onYell)="yell($event)"
+  > Hello There!</app-home>
 </section>
 
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>

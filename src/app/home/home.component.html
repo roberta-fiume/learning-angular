@@ -1,6 +1,26 @@
 <p> {{ homeTitle }}</p>
 
-<ng-content></ng-content>
+<p>{{ninja.name}}</p>
+<p>{{ninja.belt}}</p>
+
+<div style="border: solid 1px black;">
+    <p>child Component</p>
+    <br>
+    First Name: {{ firstName }}
+    <br>
+    Last Name: {{ lastName }}
+    <br>
+    Siblings:
+    <br>
+    <span *ngFor="let sibling of siblings"> 
+        {{ sibling }} <br>.
+    </span>
+
+    <button (click)="fireYellEvent($event)"> Click me!</button>
+</div>
+
+
+<!-- <ng-content></ng-content> -->
 
 <!-- property binding  1st way -->
 <!-- <input [value]="myString" /> 
@@ -10,17 +30,17 @@
 <!-- <input value="{{ myString }}" /> 
 <input required=" {{ myBoolean }} " /> -->
 
-<button (click)="alertMe('Hey I woork!')"> Click me </button>
+<!-- <button (click)="alertMe('Hey I woork!')"> Click me </button> -->
 
 
-<label for="name">Name: </label> 
+<!-- <label for="name">Name: </label> 
 <input [(ngModel)]="ninja.name">
 <p> {{ ninja.name }}</p>
 
 
 <label for="belt">Belt: </label>
 <input [(ngModel)]="ninja.belt">
-<p> {{ ninja.belt }}</p>
+<p> {{ ninja.belt }}</p> -->
 
 
 
