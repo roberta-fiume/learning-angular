@@ -3,8 +3,10 @@
 <p>{{ninja.name}}</p>
 <p>{{ninja.belt}}</p>
 
+
+
 <div style="border: solid 1px black;">
-    <p>child Component</p>
+    <p> HOME COMPONENT</p>
     <br>
     First Name: {{ firstName }}
     <br>
@@ -17,7 +19,19 @@
     </span>
 
     <button (click)="fireYellEvent($event)"> Click me!</button>
+
+    <nav>
+        <h2>Routing: </h2>
+        <ul>
+          <li><a routerLink="/first" routerLinkActive="active">First Component</a></li>
+          <li><a routerLink="/second" routerLinkActive="active">Second Component</a></li>
+        </ul>
+    </nav>
 </div>
+
+
+
+  <router-outlet></router-outlet>
 
 
 <!-- <ng-content></ng-content> -->

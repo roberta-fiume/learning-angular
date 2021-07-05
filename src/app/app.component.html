@@ -1,22 +1,26 @@
-<header>
-  <h1> {{ title }} </h1>
-  <p> {{ name }}</p>
-  <nav>
-    <ul>
-      <li>Link</li>
-      <li>Link</li>
-    </ul>
-  </nav>
-</header>
 
-<section>
-  <app-home 
-    [ninja]="ninja"
-    [firstName]="robertaProp"
-    [lastName]="lastName"
-    [siblings]="siblings"
-    (onYell)="yell($event)"
-  > Hello There!</app-home>
-</section>
+<div style="border: solid 1px red; padding: 20px">
+  <header>
+    <h1> {{ name }} {{ title }} </h1>
+  
+    <button (click)="navigate()"> Navigate to First </button>
+  
+    <router-outlet></router-outlet>
+  </header>
+  
+  <section>
+    <app-home 
+      [ninja]="ninja"
+      [firstName]="robertaProp"
+      [lastName]="lastName"
+      [siblings]="siblings"
+      (onYell)="yell($event)"
+    > 
+    </app-home>
+  </section>
 
-<router-outlet></router-outlet>
+</div>
+
+
+
+
