@@ -8,6 +8,10 @@ import { FormsModule }   from '@angular/forms';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ChildComponent } from './home/child/child.component';
+import { ButtonComponent } from './components/button/button.component';
+import { HeaderComponent } from './components/header/header.component';
+import { TasksComponent } from './components/tasks/tasks.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +19,10 @@ import { ChildComponent } from './home/child/child.component';
     HomeComponent,
     FirstComponent,
     SecondComponent,
-    ChildComponent
+    ChildComponent,
+    ButtonComponent,
+    HeaderComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
