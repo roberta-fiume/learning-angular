@@ -30,6 +30,9 @@ export class HomeComponent implements OnInit {
 
   @Output() onYell = new EventEmitter();
 
+
+  JulioName = 'Julio Lopez'
+
   fireYellEvent(e: any) {
     this.onYell.emit(e);
   }
