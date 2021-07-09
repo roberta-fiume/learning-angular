@@ -1,11 +1,18 @@
-<div class="task">
+<div 
+    class="task" 
+    [ngClass]="{ border: task.reminder }"
+    (dblclick)="onToggle(task)"
+> 
     <h3 class="task__reminder">{{ task.text }} 
         <fa-icon 
             [ngStyle]="{'color': 'red'}" 
             [icon]="faTimes"
             (click)="onDelete(task)"
         >
-        </fa-icon></h3>
-    <p class="task__day"> {{ task.day }}</p>
+        </fa-icon>
+    </h3>
+    <p class="task__day" > {{ task.day }}</p>
 </div>
+
+<!-- on the div with class task we add the class border if the task.reminder is true -->
 

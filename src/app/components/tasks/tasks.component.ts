@@ -22,4 +22,10 @@ export class TasksComponent implements OnInit {
       (this.tasks = this.tasks.filter( t => t.id !== task.id)));  //for each task we want that the task.id is not equal to the task.id that we deleted
   }
 
+  toggleReminder(task: Task) {
+    console.log("I'm called")
+    task.reminder = !task.reminder;
+    console.log("task reminder:", task.reminder);
+  }
+
 }
